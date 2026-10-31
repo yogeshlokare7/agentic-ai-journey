@@ -1,6 +1,8 @@
 import asyncio
 import time
 
+from dotenv import load_dotenv
+
 from agentic_ai_journey.clients.async_placeholder_client import AsyncPlaceholderClient
 from agentic_ai_journey.models.placeholder import Post, User
 
@@ -61,4 +63,5 @@ async def main() -> None:
         await rate_limited(client, users)
 
 
+load_dotenv()
 asyncio.run(main())

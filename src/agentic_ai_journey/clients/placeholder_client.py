@@ -2,11 +2,8 @@ import os
 from types import TracebackType
 
 import httpx
-from dotenv import load_dotenv
 
 from agentic_ai_journey.models.placeholder import Post, User
-
-load_dotenv()
 
 
 class UserNotFoundError(Exception):

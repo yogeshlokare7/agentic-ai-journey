@@ -1,10 +1,7 @@
-
 from pydantic import BaseModel, Field
 
 class Company(BaseModel):
     name: str
-    catchPhrase: str
-    bs: str
 
 class User(BaseModel):
     id: int
@@ -14,8 +11,6 @@ class User(BaseModel):
 
 class Post(BaseModel):
     id: int
-    userId: int = Field(alias="userId")
+    user_id: int = Field(alias="userId")
     title: str
     body: str
-
-    

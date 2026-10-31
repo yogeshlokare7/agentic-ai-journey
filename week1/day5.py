@@ -1,6 +1,10 @@
 import time
 
+from dotenv import load_dotenv
+
 from agentic_ai_journey.clients.placeholder_client import PlaceholderClient, UserNotFoundError
+
+load_dotenv()
 
 with PlaceholderClient() as client:
     start = time.perf_counter()

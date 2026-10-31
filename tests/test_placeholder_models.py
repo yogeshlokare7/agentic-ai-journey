@@ -50,7 +50,7 @@ def test_user_without_company_raises_validation_error(user_data):
 def test_valid_post_is_created(post_data):
     post = Post(**post_data)
 
-    assert post.userId == 1
+    assert post.user_id == 1
     assert post.title == "Hello"
 
 
@@ -71,3 +71,10 @@ def test_post_with_non_numeric_user_id_raises_validation_error(post_data):
         Post(**post_data)
 
     assert exc_info.value.errors()[0]["loc"] == ("userId",)
+
+
+def test_post_dumps_user_id_back_to_api_name(post_data):
+    post = Post(**post_data)
+
+    assert post.model_dump(by_alias=True)["userId"] == 1
+    assert post.model_dump()["user_id"] == 1

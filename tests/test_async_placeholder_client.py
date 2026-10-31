@@ -15,7 +15,7 @@ USER = {
     "id": 1,
     "name": "Leanne Graham",
     "email": "Sincere@april.biz",
-    "company": {"name": "Romaguera-Crona", "catchPhrase": "x", "bs": "y"},
+    "company": {"name": "Romaguera-Crona"},
 }
 POST = {"id": 1, "userId": 1, "title": "Hello", "body": "First post"}
 
