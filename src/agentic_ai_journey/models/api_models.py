@@ -14,7 +14,10 @@ class Customer(BaseModel):
 
     @field_validator("email")
     @classmethod
-    def validate_email(cls, v):
-        if v is not None and "@" not in v:
-            raise ValueError("Invalid email address")
-        return v   
+    def validate_email(cls, v: str | None) -> str | None:
+       if v is None:
+           return v
+       v = v.strip().lower()
+       if "@" not in v:
+           raise ValueError("Invalid email address")
+       return v   
