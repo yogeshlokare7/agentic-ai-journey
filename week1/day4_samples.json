@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Asha Patil",
+    "age": 29,
+    "email": "asha.patil@example.com",
+    "address": {"city": "Pune", "pincode": "411001"},
+    "tags": ["premium", "newsletter"]
+  },
+  {
+    "name": "Rahul Mehta",
+    "age": 45,
+    "email": null,
+    "address": {"city": "Mumbai", "pincode": "400050"},
+    "tags": []
+  },
+  {
+    "name": "Sneha Kulkarni",
+    "age": 34,
+    "email": "sneha.k@example.com",
+    "address": {"city": "Nashik", "pincode": "42200A"},
+    "tags": ["trial"]
+  },
+  {
+    "name": "Arjun Rao",
+    "age": 15,
+    "email": "arjun.rao@example.com",
+    "address": {"city": "Bengaluru", "pincode": "560001"},
+    "tags": []
+  },
+  {
+    "age": 52,
+    "email": "unknown@example.com",
+    "address": {"city": "Delhi", "pincode": "110001"},
+    "tags": ["vip"]
+  }
+]
