@@ -10,7 +10,7 @@ def library():
         books=[
             Book("Dune", "Frank Herbert", 1965),
             Book("Children of Dune", "Frank Herbert", 1976),
-            Book("Neuromancer", "William Gibson", 1984, isAvailable=False),
+            Book("Neuromancer", "William Gibson", 1984, is_available=False),
         ]
     )
 
@@ -43,7 +43,7 @@ def test_filter_by_author_is_case_sensitive(library):
 
 def test_borrow_available_book_succeeds(library):
     assert library.borrow("Dune") is True
-    assert library.books[0].isAvailable is False
+    assert library.books[0].is_available is False
 
 
 def test_borrow_same_book_twice_fails(library):

@@ -1,11 +1,11 @@
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 from agentic_ai_journey.models.book import Book
 
 @dataclass
 class Library:
-    books: list[Book]
+    books: list[Book] = field(default_factory=list)
 
     def add_book(self, book: Book) -> None:
         """Add a book to the library."""
@@ -18,8 +18,8 @@ class Library:
     def borrow(self, title:str) -> bool:
         """Borrow a book by title. Returns True if successful, False if the book is not available."""
         for book in self.books:
-            if book.title == title and book.isAvailable:
-                book.isAvailable = False
+            if book.title == title and book.is_available:
+                book.is_available = False
                 return True
         return False
 
@@ -27,4 +27,4 @@ class Library:
     @property
     def available_count(self) -> int:
         """Count the number of available books in the library."""
-        return sum(1 for book in self.books if book.isAvailable)
+        return sum(1 for book in self.books if book.is_available)
